@@ -1,0 +1,63 @@
+{
+    "root": true,
+    "env": {
+        "browser": true,
+        "commonjs": true,
+        "es6": true,
+        "node": true,
+        "jest": true
+    },
+    "installedESLint": true,
+    "parser": "babel-eslint",
+    "parserOptions": {
+        "ecmaFeatures": {
+            "experimentalObjectRestSpread": true,
+            "jsx": true
+        },
+        "sourceType": "module"
+    },
+    "plugins": [
+        "react"
+    ],
+    "extends": [
+        "eslint:recommended",
+        "plugin:react/recommended"
+    ],
+    "rules": {
+        "indent": [ "warn", "tab" ],
+        "no-mixed-spaces-and-tabs": ["error", "smart-tabs"],
+        "linebreak-style": [ "error", "unix" ],
+        "quotes": [ "error", "single" ],
+        "semi": [ "error", "always" ],
+        "comma-dangle": ["error", "always-multiline"],
+        "no-cond-assign": ["error", "always"],
+        "no-unused-vars": "warn",
+        "eqeqeq": ["error", "allow-null"],
+        "array-callback-return": "error",
+        "block-scoped-var":"error",
+        "curly": "error",
+        "default-case":"error",
+        "no-eval":"error",
+        "no-implied-eval":"error",
+        "no-self-compare":"error",
+        "radix": ["error", "as-needed"],
+        "array-bracket-spacing":["error", "always", { "singleValue": false, "objectsInArrays": false, "arraysInArrays": false }],
+        "no-trailing-spaces":"error",
+        "no-unneeded-ternary":"error",
+        "object-curly-spacing":["error", "always", { "arraysInObjects": false, "objectsInObjects": false }],
+        "no-duplicate-imports":"error",
+        "no-case-declarations":"off",
+        "newline-per-chained-call": ["error", { "ignoreChainWithDepth": 3 }],
+        "space-in-parens":["error", "always", { "exceptions": ["{}", "[]", "()", "empty"] }],
+        "space-before-function-paren":["error", "never"],
+        "space-before-blocks": ["error", "never"],
+        "react/no-did-mount-set-state": "warn",
+        "react/no-did-update-set-state": "warn",
+        "react/no-unescaped-entities": "warn",
+        "react/prefer-es6-class": ["error", "always"],
+        "react/jsx-curly-spacing":["error", "always", {"spacing":{"objectLiterals": "never"}}],
+        "react/jsx-indent": ["error", "tab"],
+        "react/jsx-no-bind": ["error", {"ignoreRefs":true}],
+        "react/jsx-no-target-blank": "error"
+    }
+}

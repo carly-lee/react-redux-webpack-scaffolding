@@ -1,6 +1,8 @@
 import { createStore, combineReducers, applyMiddleware, compose } from 'redux';
 import thunk from 'redux-thunk';
 import createLogger from 'redux-logger';
+import { browserHistory } from 'react-router';
+import { routerReducer, routerMiddleware } from 'react-router-redux';
 
 import * as reducers from 'reducers';
 import DevTools from 'app/DevTools';
@@ -9,10 +11,11 @@ export default function configureStore(){
 
 	const combinedReducers = combineReducers({
 		...reducers,
+		routing: routerReducer,
 	});
 
 	const enhancer = compose(
-    applyMiddleware( thunk, createLogger()),
+    applyMiddleware( thunk, routerMiddleware( browserHistory ), createLogger()),
     DevTools.instrument()
   );
 

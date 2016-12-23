@@ -37,6 +37,7 @@
         "block-scoped-var":"error",
         "curly": "error",
         "default-case":"error",
+        "no-console":["error", { "allow": ["warn", "error", "debug"] }],
         "no-eval":"error",
         "no-implied-eval":"error",
         "no-self-compare":"error",

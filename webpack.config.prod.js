@@ -12,7 +12,7 @@ var publicPath = '/';
 
 module.exports = {
 	entry:[
-		'./src/app/index.prod.js',
+		'./src/app/index.js',
 	],
 	output:{
 		path: path.join( __dirname, '/build/' ),
@@ -24,6 +24,7 @@ module.exports = {
 		root: path.resolve( __dirname ),
 		alias: {
 			app: path.join( __dirname,'src/app' ),
+			appContainer: path.join( __dirname, 'src/app/containers/app/dev' ),
 			store: path.join( __dirname,'src/app/store/prod' ),
 			actions: path.join( __dirname,'src/app/actions' ),
 			reducers: path.join( __dirname,'src/app/reducers' ),

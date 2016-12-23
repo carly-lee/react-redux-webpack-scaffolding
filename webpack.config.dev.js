@@ -12,7 +12,7 @@ module.exports = {
 	entry:[
 		'webpack-dev-server/client?http://localhost:3000',
 		'webpack/hot/dev-server',
-		'./src/app/index.dev.js',
+		'./src/app/index.js',
 	],
 	output:{
 		path: path.join( __dirname, '/build/' ),
@@ -26,6 +26,7 @@ module.exports = {
 		alias: {
 			'react/lib/ReactMount': 'react-dom/lib/ReactMount', //for react-hot-loader
 			app: path.join( __dirname,'src/app' ),
+			appContainer: path.join( __dirname, 'src/app/containers/app/dev' ),
 			store: path.join( __dirname,'src/app/store/dev' ),
 			actions: path.join( __dirname,'src/app/actions' ),
 			reducers: path.join( __dirname,'src/app/reducers' ),

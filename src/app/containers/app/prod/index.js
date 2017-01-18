@@ -1,9 +1,10 @@
-import React, { Component, PropTypes } from 'react';
+import React, { PureComponent, PropTypes } from 'react';
 import { connect } from 'react-redux';
 
-export class App extends Component{
-	constructor( props ){
-		super( props );
+export class App extends PureComponent{
+
+	static propTypes = {
+		children: PropTypes.element,
 	}
 
 	render(){
@@ -14,10 +15,6 @@ export class App extends Component{
 		);
 	}
 }
-
-App.propTypes = {
-	children: PropTypes.element,
-};
 
 function mapStateToProps( state ){
 	return {

@@ -7,7 +7,7 @@ import NotFound from 'containers/notfound';
 
 const Routes = (
 	<Route path={ '/' } component={ App }>
-		<IndexRoute component={ App } />
+		<IndexRoute component={ About } />
 		<Route path="about" component={ About } />
 		<Route path='*' component={ NotFound } status={ 404 } />
 	</Route>

@@ -95,8 +95,8 @@
     ]
   },
   "jest": {
-    "automock": false,
     "verbose": true,
+    "timers": "fake",
     "transform": {
       ".*": "<rootDir>/node_modules/babel-jest"
     },

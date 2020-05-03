@@ -8,7 +8,9 @@
     "build": "webpack --progress --config ./webpack.config.prod.js",
     "lint": "eslint **/*",
     "lint-fix": "eslint **/* --fix",
-    "test": "NODE_ENV=test BABEL_DISABLE_CACHE=1 jest"
+    "test": "NODE_ENV=test BABEL_DISABLE_CACHE=1 jest",
+    "snyk-protect": "snyk protect",
+    "prepare": "yarn run snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -40,7 +42,8 @@
     "react-router": "^3.0.0",
     "react-router-redux": "^4.0.7",
     "redux": "^3.6.0",
-    "redux-thunk": "^2.1.0"
+    "redux-thunk": "^2.1.0",
+    "snyk": "^1.316.2"
   },
   "devDependencies": {
     "babel-core": "^6.18.2",
@@ -127,5 +130,6 @@
   },
   "eslintConfig": {
     "extends": "react-app"
-  }
+  },
+  "snyk": true
 }

@@ -31,7 +31,7 @@
   },
   "homepage": "https://github.com/carly-lee/react-redux-webpack-scaffolding#readme",
   "dependencies": {
-    "isomorphic-fetch": "^2.2.1",
+    "isomorphic-fetch": "^3.0.0",
     "normalize.css": "^5.0.0",
     "react": "^15.4.1",
     "react-dom": "^15.4.1",
